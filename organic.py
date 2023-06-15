@@ -5,10 +5,10 @@ class GoogleScholarSpider(scrapy.Spider):
     name = "google_scholar"
 
     def start_requests(self):
-        url = "https://scholar.google.com/scholar?hl=ru"
+        url = "https://scholar.google.com/scholar?hl=en"
 
         params = {
-            "q": "дополненная реальность в образовании",
+            "q": "ar in education",
             "hl": "ru",
             "as_ylo": "2018",
             "as_yhi": "2023",
@@ -36,5 +36,5 @@ class GoogleScholarSpider(scrapy.Spider):
             })
 
         # Сохранение результатов в файл organic.json
-        with open("organic.json", "w") as file:
-            json.dump(results, file)
+        with open("organic.json", "w", encoding="utf-8") as file:
+            json.dump(results, file, ensure_ascii=False)

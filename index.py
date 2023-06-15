@@ -19,12 +19,12 @@ print("Ожидание сохранения результатов органи
 with open("organic.json", "r") as file:
     organic_data = json.load(file)
 organic_df = pd.DataFrame(organic_data)
-organic_df.to_csv("organic.csv", encoding="utf-8", index=False)
+organic_df.to_csv("organic.csv", encoding="utf-8-sig", index=False)
 print("Результаты органического поиска сохранены в файл organic.csv")
 
 print("Ожидание сохранения результатов цитирования...")
 with open("citations.json", "r") as file:
     citations_data = json.load(file)
 citations_df = pd.DataFrame(citations_data)
-citations_df.to_csv("citations.csv", encoding="utf-8", index=False)
+citations_df.to_csv("citations.csv", encoding="utf-8-sig", index=False)
 print("Результаты цитирования сохранены в файл citations.csv")
