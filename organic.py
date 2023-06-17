@@ -5,10 +5,10 @@ class GoogleScholarSpider(scrapy.Spider):
     name = "google_scholar"
 
     def start_requests(self):
-        url = "https://scholar.google.com/scholar?hl=en"
+        url = "https://scholar.google.com/scholar?hl=ru"
 
         params = {
-            "q": "ar in education",
+            "q": "дополненная реальность образование",
             "hl": "ru",
             "as_ylo": "2018",
             "as_yhi": "2023",
